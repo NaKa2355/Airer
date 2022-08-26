@@ -1,2 +1,2 @@
 # Airer(Atmega328p IR Emitter Receiver)
-IR emitter and receiver over SPI for atmega328p
+Atmega328p(arduino uno)で動く赤外線受信、送信機です。SPIを使って操作することができます。
