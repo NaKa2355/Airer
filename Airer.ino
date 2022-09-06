@@ -1,4 +1,4 @@
-// ir-spi (ver 0.1.0) 2022/8/11
+// ir-spi (ver 0.2.0) 2022/9/6
 
 // 配線
 // 13pin: CLK
@@ -67,6 +67,7 @@ void setup() {
   pinMode(SEND_PIN, OUTPUT);
   pinMode(BUSY_PIN, OUTPUT);
   digitalWrite(BUSY_PIN, LOW);
+  digitalWrite(SEND_PIN,LOW);
   SPI.attachInterrupt();
   spi_setup();
 }

@@ -46,13 +46,13 @@ int send_ir(int pin, int16_t data[], uint16_t data_len, unsigned long timeout) {
       if(data[i] >= 0) {
         emit_pulse(pin, (unsigned long)(data[i]), timeout);
       } else {
-        emit_pulse(pin, (unsigned long)(data[i]) * -1 * 1000, timeout);
+        emit_pulse(pin, (unsigned long)(data[i] * -1) * 1000, timeout);
       }
     } else {
       if(data[i] >= 0) {
-        smart_delay((unsigned long)data[i], timeout);
+        smart_delay((unsigned long)(data[i]), timeout);
       } else {
-        smart_delay((unsigned long)data[i] * -1 * 1000, timeout);
+        smart_delay((unsigned long)(data[i] * -1) * 1000, timeout);
       }
     }
   }
