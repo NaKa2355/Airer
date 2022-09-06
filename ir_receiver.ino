@@ -17,6 +17,7 @@ int receive_ir(int pin, int16_t buf[], uint16_t buf_len, unsigned long recv_time
         pulse = micros() - t;
         if(index >= buf_len) return 0;
         if(pulse > INT16_MAX) {
+          if(pulse / 1000 > INT16_MIN*-1) return 0;
           buf[index] = (pulse / 1000) * -1;
         } else {
           buf[index] = pulse;
